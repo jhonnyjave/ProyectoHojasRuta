@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/theme.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/primeicons/primeicons.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/fa/font-awesome.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/components.css" />
+	<script type="text/javascript"
+		src="#{request.contextPath}/faces/resources/jquery/jquery.js"></script>
+	<script type="text/javascript"
+		src="#{request.contextPath}/faces/resources/core.js"></script>
+	<script type="text/javascript"
+		src="#{request.contextPath}/faces/resources/components.js"></script>
+	<script type="text/javascript"
+		src="#{request.contextPath}/faces/resources/jquery/jquery-plugins.js"></script>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/css/layout-light.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/faces/resources/css/primeicons.css" />
+	<script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.viewId='/login.xhtml';PrimeFaces.settings.contextPath='/poseidon';PrimeFaces.settings.cookiesSecure=false;}</script>
+	<title>PrimeFaces Poseidon</title>
+</h:head>
+<h:body>
+	<h:form>
+
+		<div class="login-wrapper">
+			<div class="login-panel">
+				<a href="dashboard.html" class="logo"><img id="j_idt8"
+					src="#{request.contextPath}/faces/resources/images/logo-poseidon-dark.svg"
+					alt="" /></a>
+				<div class="login-form">
+					<h2>Login To Your Premium Account</h2>
+					<p>
+						You dont have an account? <a href="#"> Signup</a>
+					</p>
+
+
+
+
+
+					<p:panel >
+						<center>
+							<h1>BIENVENIDO</h1>
+						</center>
+						<div align="center">iniciar sesión</div>
+						 <center><img class="responsive-img" src="resources\images\logo_tihuanacu.png" style="max-width: 100px;" />
+                                 </center>  
+						<div align="center">
+						<p:panelGrid columns="2" cellpadding="8"
+							styleClass="ui-panelgrid-blank">
+							<h:outputLabel value="Usuario"/>
+							<p:inputText id="codHojaRuta" value="#{loginController.username}"
+								styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"></p:inputText>
+
+							<h:outputLabel value="Contraseña:"/>
+							<h:inputSecret id="password" required="true"
+								value="#{loginController.password}"
+								requiredMessage="Contraseña Requerido!"
+								styleClass="ui-password ui-inputfield ui-widget ui-state-default ui-corner-all" />
+
+							<br></br>
+							<p:commandButton value="Login" action="#{loginController.access}"
+								styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"></p:commandButton>
+						</p:panelGrid>
+						</div>
+					</p:panel>
+
+					<script id="email_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_email",{id:"email"});});
+                    </script>
+					<script id="password_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_password",{id:"password"});});</script>
+
+					<script id="j_idt10_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt10",{id:"j_idt10"});});</script>
+				</div>
+
+				<p>
+					A problem? <a href="#">Click here</a> and let us help you.
+				</p>
+			</div>
+		</div>
+	</h:form>
+</h:body>
+</html>

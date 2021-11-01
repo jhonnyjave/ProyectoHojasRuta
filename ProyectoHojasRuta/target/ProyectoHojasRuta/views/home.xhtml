@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="/views/template.xhtml"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="content">
+		<h1>Inicio</h1>
+		<h:form id="Form">
+
+			<div class="card">
+				<h5 class="p-mt-0"></h5>
+				<p:tabView>
+					<p:tab title="Recientes">
+						<p class="p-m-0">RECIENTES</p>
+
+						<p:panel>
+							<p:panelGrid columns="4" cellpadding="8"
+								styleClass="ui-panelgrid-blank">
+								<h:outputLabel value="Código de Hoja de Ruta" />
+								<p:inputText id="codHojaRuta"></p:inputText>
+
+								<h:outputLabel value="Número de registro:" />
+								<p:inputText id="numReg"></p:inputText>
+								<br></br>
+								<p:commandButton value="Buscar"></p:commandButton>
+							</p:panelGrid>
+						</p:panel>
+						<br />
+						<div>
+							<p:dataTable>
+								<p:column headerText="Recepción">
+
+								</p:column>
+								<p:column headerText="Remitente">
+
+								</p:column>
+								<p:column headerText="Entrada">
+
+								</p:column>
+								<p:column headerText="Referencia">
+
+								</p:column>
+								<p:column headerText="Tipo Doc">
+
+								</p:column>
+								<p:column headerText="Fecha Rem">
+
+								</p:column>
+								<p:column headerText="Area Rem">
+
+								</p:column>
+								<p:column headerText="Fecha Recibido">
+
+								</p:column>
+								<p:column headerText="Recibir">
+
+								</p:column>
+							</p:dataTable>
+						</div>
+
+
+					</p:tab>
+					<p:tab title="Pendientes">
+						<p class="p-m-0">PENDIENTES.</p>
+					</p:tab>
+					<p:tab title="Derivados">
+						<p class="p-m-0">DERIVADOS.</p>
+					</p:tab>
+				</p:tabView>
+			</div>
+
+<p:commandButton value="prueba base" action="#{usuarioMB.guardarUsuario()}"></p:commandButton>
+<p:commandButton value="lista usuarios" action="#{usuarioMB.getUsuarios()}"></p:commandButton>
+
+			<div class="p-field p-col-12 p-md-4">
+
+				<p:selectOneMenu id="option" value="1">
+					<f:selectItem itemLabel="Select One" itemValue="" />
+					<f:selectItem itemLabel="Option1" itemValue="Option1" />
+					<f:selectItem itemLabel="Option2" itemValue="Option2" />
+					<f:selectItem itemLabel="Option3" itemValue="Option3" />
+
+				</p:selectOneMenu>
+			</div>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
